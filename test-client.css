@@ -1,0 +1,214 @@
+
+body {
+    font-family: sans-serif;
+}
+
+header, main, footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+form, section {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 30px 0 30px 0;
+    overflow: auto;
+    position: relative;
+}
+
+h2 {
+    margin: 10px 5px 20px 5px;
+}
+
+form div, .hbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 5px 0;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.vbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    display: block;
+}
+
+/* TABLE */
+table {
+    position: relative;
+    margin: 5px;
+    min-height: 200px;
+    width: 100%;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    font-size: 16px;
+    padding: 5px;
+}
+
+th {
+    color: white;
+    background-color: cornflowerblue;
+    border: 0;
+    border-bottom: 1px solid #3e62a2;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    text-align: left;
+    padding: 10px 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+td {
+    border-top: 1px solid #ccc;
+}
+
+td > input {
+    background: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* OVERLAYS */
+.masked {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.75);
+    color: #555;
+}
+
+.notification {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*align-content: center;
+    justify-content: center;*/
+    border: 4px solid white;
+    background: rgba(255, 255, 255, 0.75);
+    color: #555;
+    box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.notification h1 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+
+.notification p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+
+.no-data {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #e2e244;
+}
+
+.field {
+    border: 1px solid #ccc;
+    margin: 5px;
+    flex: auto;
+}
+
+.field input {
+    background: transparent;
+}
+
+.message {
+    border: 1px solid orange;
+    min-height: 100px;
+    margin: 5px;
+    padding: 0;
+    flex: 1;
+    overflow: auto;
+    /*position: absolute;
+    bottom: 0;
+    left: 0; right: 0;*/
+}
+.list {
+    border: 1px solid orange;
+    min-height: 100px;
+    margin: 5px;
+    padding: 0;
+    flex: 1;
+}
+
+input, label {
+    flex: 2;
+    font-size: 16px;
+    line-height: 2;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    border: none;
+}
+
+label {
+    flex: 0;
+    line-height: 2.3;
+    text-align: right;
+    min-width: 110px;
+    max-width: 35%;
+    background-color: #eee;
+    border-right: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 5px 16px;
+    margin: 5px;
+    line-height: 2;
+    border: none;
+    background: cornflowerblue;
+    font-size: 16px;
+    color: white;
+    flex: 0;
+}
+
+input[type="file"] {
+    line-height: 0;
+    padding: 5px 0px;
+}
+
+.align-to-top {
+    align-items: flex-start;
+    align-content: stretch;
+}
+
+.clearfix::after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
+}

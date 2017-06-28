@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test Client</title>
+        <link rel="stylesheet" href="test-client.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Test Client</h1>
+            <i>Making Sure it Works With Zero 3rd Party Assistance...</i>
+        </header> 
+        <main>
+
+            <form id="register" method="POST" action="http://localhost:8080/register">
+                <h2>Register:</h2>
+
+                <div>
+                    <div class="field">
+                        <label for="username">username:</label>
+                        <input type="text" name="username" id="username" placeholder="Username" value="" required/>
+                    </div>
+
+                    <div class="field">
+                        <label for="first">first/last:</label>
+                        <input type="text" name="first" id="first" placeholder="First Name" value="" />
+                        <input type="text" name="last"  id="last"  placeholder="Last Name"  value="" />
+                    </div>
+                </div>
+
+                <div>
+                    <div class="field">
+                        <label for="email">email:</label>
+                        <input type="text" name="email" id="email" placeholder="you@email.com" value="" />
+                    </div>
+
+                    <div class="field">
+                        <label for="password">password:</label>
+                        <input type="password" name="password"         id="password"        placeholder="password"         value=""/>
+                        <input type="password" name="password_confirm" id="passwordConfirm" placeholder="confirm password" value=""/>
+                    </div>
+                </div>
+
+                <input type="submit" value="Save"/>
+            </form>
+
+            <form id="login"    method="POST" action="http://localhost:8080/login">
+                <h2>Login:</h2>
+
+                <div>
+                    <div class="field">
+                        <label for="email">email:</label>
+                        <input type="text" name="email" id="email" value="" placeholder="Email"/>
+                    </div>
+
+                    <div class="field">
+                        <label for="password">password:</label>
+                        <input type="password" name="password" id="password" value="" placeholder="Password"/>
+                    </div>
+                </div>
+
+                <input type="submit" value="Save"/>
+            </form>
+
+            <form id="thing"    method="POST" action="http://localhost:8080/things">
+                <h2>Create Thing:</h2>
+
+                <div class="field">
+                    <label for="title">title:</label>
+                    <input type="text" name="title" id="title" value="" placeholder="Title"/>
+                </div>
+
+                <div class="field">
+                    <label for="description">description:</label>
+                    <input type="text" name="description" id="description" value="" placeholder="Description"/>
+                </div>
+
+                <input type="submit" value="Save"/>
+            </form>
+
+            <section id="listThings">
+                <h2>Get Things:</h2>
+                <input type="submit" id="loadThings" value="Get Things"/>
+
+                <div class="align-to-top">
+                    <table class="list"></table>
+                </div>
+            </section>
+
+            <section>
+                <h2>Log:</h2>
+                <div class="message" id="results"></div>
+            </section>
+        </main>
+    </body>
+    
+    <script src="loader.js" charset="utf-8"></script>
+</html>
